@@ -2,10 +2,25 @@
 <html>
 	<head>
 		<title>MyApp</title>
+		
+		<!-- Icon on home screen, splash screen on load, tells Apple it's an app, specify the top 20px on the phone, specify the width is width of iPhone  -->
+		<!-- On iPhone, open in browser and then press home key, which brings up menu to add as app to homepage -->
+		<link rel="apple<link rel="apple-touch-icon" href="appicon.png" />
+		<link rel="apple-touch-startup-image" href="startup.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-webapp-status-bar-style" content="grey" />
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+		
+		
 		<style type="text/css">
 		
 			body {
 				background:#ff9900;
+				
+				/*background: #f06;
+				background: linear-gradient(45deg, #f06, yellow);
+				min-height: 100%;*/
+
 				font-family: Helvetica, Arial, sans-serif;
 			}
 			h2 {
@@ -13,6 +28,29 @@
 				font-weight:300;
 				color:#0000ff;
 			}
+			
+			#assignments {
+				font-style: italic;
+				
+			}
+			
+			.opacity {
+				opacity: 0.4;		
+			}
+			
+			.button {
+				background:#333;
+				width:100px;
+				color:#fff;
+				height:20px;
+				-moz-border-radius: 20px;
+				-webkit-border-radius: 20px;
+				-khtml-border-radius: 20px;
+				border-radius: 20px;
+				text-align: center;
+			}
+			
+			
 		</style>
 	</head>
 	
@@ -20,20 +58,33 @@
 	</style>
 	
 	<body>
+	
+		
+		
 		<h2>Jeff</h2>
 		<div id='bio'>Crime-solver. Noir detective extraordinaire.</div>
 	 
 	 	<h3>Assignments</h3>
-		<ul id='assignments'>
+		<ol id='assignments'>
 			<li>Go undercover</li>
 			<li>Learn HTML</li>
-		</ul>
+		</ol>
 	
 		<h3>A nice button</h3>
+		<button class='button'>Click Me!</button>
 
 		<h3>An invisible seal</h3>
+		<p><img width='50' class='opacity' src='seal.png'/></p>
+	
 
 		<h3>A video</h3>
+			
+		<video width="300" height="240" controls="controls">
+		  <source src="gizmo.mp4" type="video/mp4" />
+		</video>
+		
+		
+		
 
 		<h3>Two boxes side by side</h3>
 
